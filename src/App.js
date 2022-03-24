@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import Header from './Header';
+import data from './data.json';
+import ToDoList from './ToDoList';
 import './App.css';
-
+ 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  const [ toDoList, setToDoList ] = useState(data);
 
+  const handleToggle = (id) => {
+    let mapped = toDoList.map(task => {
+      return task.id == id ? { ...task, complete: !task.complete } : { ...task};
+    });
+    setToDoList(mapped);
+  }
+  // filter task status # complete 
+  const handleFilter = () => {
+    let filtered = toDoList.filter(task => {
+      return !task.complete;
+    });
+    setToDoList(filtered);
+  }
+  const resetTodolist = () =>{
+    let resetlist = [];
+    setToDoList(resetlist);
+  }
+
+ return (
+   <div className="App">
+    	<Header/>
+      <ToDoList toDoList={toDoList} handleToggle={handleToggle} handleFilter={handleFilter} resetTodolist={resetTodolist}/>
+   </div>
+ );
+}
+ 
 export default App;

@@ -1,0 +1,21 @@
+[{
+    "id": 1,
+    "task": "Learn ReactJS basics",
+    "complete": true
+  }, {
+    "id": 2,
+    "task": "Practice ReactJS",
+    "complete": true
+  }, {
+    "id": 3,
+    "task": "Learn Redux",
+    "complete": false
+  }, {
+    "id": 4,
+    "task": "Code portfolio in React",
+    "complete": false
+  }, {
+    "id": 5,
+    "task": "Learn React Native",
+    "complete": false
+  }]
