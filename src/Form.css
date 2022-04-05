@@ -1,0 +1,22 @@
+.taksInput{
+    height : 29px;
+    width : 300px;
+    border-radius : 5px;
+}
+.addBt{
+    border : none;
+    background-color :rgb(26, 202, 214);
+    color :white;
+    height : 35px;
+    width : 300px;
+    border-radius : 5px;
+}
+
+.deleteBtn{
+    border : none;
+    background-color :rgb(219, 47, 47);
+    color :white;
+    height : 35px;
+    width : 300px;
+    border-radius : 5px;
+}
